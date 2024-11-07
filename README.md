@@ -1,5 +1,5 @@
-<img src="https://github.com/bbarker505/ddrp_v3/blob/master/images/DDRP_logo2.png" width="300"/>
-<img src="https://github.com/bbarker505/ddrp_v3/blob/master/images/OSU_IPMC_horizontal_2C_O_over_B.png" width="300"/>
+<img src="https://github.com/bbarker505/ddrp_v2/blob/master/images/DDRP_logo2.png" width="300"/>
+<img src="https://github.com/bbarker505/ddrp_v2/blob/master/images/OSU_IPMC_horizontal_2C_O_over_B.png" width="300"/>
 
 # An introduction to DDRP
 
@@ -22,7 +22,7 @@ available at [USPest.org](http://uspest.org/dd/dodmaps).
 
 <figure>
 <img
-src="https://github.com/bbarker505/ddrp_v3/blob/master/images/model_overview.png?raw=true"
+src="https://github.com/bbarker505/ddrp_v2/blob/master/images/model_overview.png?raw=true"
 alt="Model overview" />
 <figcaption aria-hidden="true">Model overview</figcaption>
 </figure>
@@ -109,7 +109,7 @@ to be excluded from the potential distribution.
 
 <figure>
 <img
-src="https://github.com/bbarker505/ddrp_v3/blob/master/images/EAB_2021.gif?raw=true"
+src="https://github.com/bbarker505/ddrp_v2/blob/master/images/EAB_2021.gif?raw=true"
 alt="Movie" />
 <figcaption aria-hidden="true">Movie</figcaption>
 </figure>
@@ -119,7 +119,7 @@ phenological event map, below.
 
 <figure>
 <img
-src="https://github.com/bbarker505/ddrp_v3/blob/master/images/EAB_Avg_PEMp0Excl2_20211231.png?raw=TRUE"
+src="https://github.com/bbarker505/ddrp_v2/blob/master/images/EAB_Avg_PEMp0Excl2_20211231.png?raw=TRUE"
 alt="PEM" />
 <figcaption aria-hidden="true">PEM</figcaption>
 </figure>

@@ -76,9 +76,9 @@ an auxilliary R script that contains program functions
 because we designed the code to be run from the command line on a Linux
 server. The program can also be run on a Windows system but parallel
 processing capabilities will be limited. The [user
-manual](https://github.com/bbarker505/ddrp_v3/manual/DDRP_user_guide_and_platform_requirements_V5.docx)
+manual](https://github.com/bbarker505/ddrp_v3/blob/main/manual/DDRP_user_guide_and_platform_requirements_V5.doc)
 (Coop and Barker 2024)
-“DDRP\_user\_guide\_and\_platform\_requirements\_V5.docx” is the only
+“DDRP\_user\_guide\_and\_platform\_requirements\_V5.doc” is the only
 instruction document that is currently available The instruction manual
 provides information on program requirements, input data, input options,
 examples of command line arguments, types of output files, and run
@@ -141,10 +141,10 @@ integrative phenology and climatic suitability model for emerald ash
 borer. Frontiers in Insect Science 3:1239173.
 <https://doi.org/10.3389/finsc.2023.1239173>
 
-Coop, L., and B. S. Barker. 2020. Computing infrastructure requirements
+Coop, L., and B. S. Barker. 2024. Computing infrastructure requirements
 and user guide for hosting DDRP models. Prepared for APHIS PPQ and other
 collaborators. Available
-[here](https://github.com/bbarker505/ddrp_v3/manual/DDRP_user_guide_and_platform_requirements_V5.docx).
+[here](https://github.com/bbarker505/ddrp_v3/blob/main/manual/DDRP_user_guide_and_platform_requirements_V5.doc).
 
 Grevstad, F. G., T. Wepprich, B. S. Barker, L. B. Coop, R. Shaw, and R.
 S. Bourchier. 2022. Combining photoperiod and thermal responses to

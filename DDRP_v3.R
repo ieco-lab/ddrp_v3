@@ -2,6 +2,8 @@
 #.libPaths("/usr/lib64/R/library/")
 #
 # Log of recent edits (2022-current)
+# 
+# 11/16/24: Fixed bug in Adult by Gen code that caused crashes on other server
 # 11/5/24: Finished converting code to replace "raster" with "terra" functions
 # 11/29/23: Fixed bug in PEM code block that sometimes result in errors when
 # cohorts were missing due the event not occuring in that cohort ("calc" function).
@@ -1053,7 +1055,7 @@ dats_list <- split(dats2, ceiling(seq_along(dats2)/(length(dats2)/4)))
 # exclusion, heat stress unit accumulation, heat stress exclusion, and all 
 # stress exclusion
 
-RegCluster(round(ncores/3))
+RegCluster(round(ncores/6))
 
 #for (dat in dats_list) {
 #  for (d in dat) {
@@ -1524,7 +1526,7 @@ stg_nonOW <- substring(owstage, 2)
 # the 7 cohorts for each date will be combined and "weighted" according the 
 # relative proportion of population represented by that cohort. 
 # Results for the 5 stages (E, L, P, A, and OW stage) are run in parallel.
-RegCluster(round(ncores/5))
+RegCluster(5)
 
 foreach(stg = stage_list, .packages = pkgs) %dopar% {
 #for (stg in stage_list) {
@@ -1898,7 +1900,7 @@ if (exclusions_stressunits) {
     list("NumGenExcl1_all_merged.tif", "NumGenExcl2_all_merged.tif"))
 }
 
-RegCluster(round(ncores/4))
+RegCluster(round(ncores/6))
 
 #for (i in 1:length(NumGen_mrgd_fls)) {
 foreach(i = 1:length(NumGen_mrgd_fls), .packages = pkgs,.inorder = TRUE) %:%
@@ -2338,7 +2340,7 @@ Adult_byGen_sum_maps <- foreach(j = 1:length(Adult_byGen_fls),
         #if (all(freq$value <= 0) & freq$count > 1) {
         # If only a single value is present in the layer, check that it occurs in
         # more than 1 cell
-        if (nrow(freq) == 1 & freq$count > 1) {
+        if (nrow(freq) == 1 & any(freq$count > 1)) {
           r_sub <- c(r_sub, r)
           # Not sure if this is needed....
         } else if (nrow(freq) > 1 & any(freq$count > 1)) { 

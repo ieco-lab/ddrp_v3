@@ -3,7 +3,7 @@
 #
 # Log of recent edits (2022-current)
 # 
-# 11/16/24: Fixed bug in Adult by Gen code that caused crashes on other server
+# 11/16/24: Fixed bug in Adult by Gen code that caused crashes on certain servers
 # 11/5/24: Finished converting code to replace "raster" with "terra" functions
 # 11/29/23: Fixed bug in PEM code block that sometimes result in errors when
 # cohorts were missing due the event not occuring in that cohort ("calc" function).
@@ -2340,11 +2340,11 @@ Adult_byGen_sum_maps <- foreach(j = 1:length(Adult_byGen_fls),
         #if (all(freq$value <= 0) & freq$count > 1) {
         # If only a single value is present in the layer, check that it occurs in
         # more than 1 cell
-        if (nrow(freq) == 1 & any(freq$count > 1)) {
+        if (nrow(freq) >= 1 & any(freq$count > 1)) {
           r_sub <- c(r_sub, r)
           # Not sure if this is needed....
-        } else if (nrow(freq) > 1 & any(freq$count > 1)) { 
-          r_sub <- c(r_sub, r)
+        # } else if (nrow(freq) > 1 & any(freq$count > 1)) { 
+        #   r_sub <- c(r_sub, r)
         }
       }
     }

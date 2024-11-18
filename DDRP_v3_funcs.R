@@ -810,9 +810,9 @@ DailyLoop <- function(cohort, tile_num, template) {
   # Remove .xml files generated w/ .tif files for certain rasters
   # Haven't yet figured out a way to prevent these from being created. The
   # only solution I have found is to change a GDAL setting.
-  delfiles <- dir(pattern = "*xml")
-  suppressWarnings(file.remove(delfiles))
-  gc() # Clear items from the environment - is this necessary?
+  #delfiles <- dir(pattern = "*xml")
+  #suppressWarnings(file.remove(delfiles))
+  #gc() # Clear items from the environment - is this necessary?
   
 }
 

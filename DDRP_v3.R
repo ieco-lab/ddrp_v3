@@ -26,10 +26,10 @@ pkgs <- c("doParallel", "dplyr", "foreach", "ggplot2", "ggthemes",
           "purrr", "RColorBrewer", "readr", "terra",
           "stringr", "tidyr", "tictoc", "tools", "toOrdinal", "sf")
 ld_pkgs <- lapply(pkgs, library, 
-                  lib.loc = "/usr/lib64/R/library/", character.only = TRUE)
+                  lib.loc = "C:/Program Files/R/R-4.4.1/library", character.only = TRUE)
 
 # Load collection of functions for this model
-source("/usr/local/dds/DDRP_B1/DDRP_terra/DDRP_v2_funcs.R")
+source("C:/Users/tuk34375/Documents/GitHub/ddrp_v3/DDRP_v3_funcs.R")
 
 # Bring in states feature for summary maps (PNG files)
 # Requires these libraries: "mapdata" and "maptools"
@@ -141,7 +141,7 @@ if (!is.na(opts[1])) {
   start_doy     <- 1 # Start day of year          
   end_doy       <- 365 # End day of year - need 365 if voltinism map 
   keep_leap     <- 1 # Should leap day be kept?
-  region_param  <- "WEST" # Region 
+  region_param  <- "CONUS" # Region 
   exclusions_stressunits    <- 1 # Turn on/off climate stress unit exclusions
   pems          <- 1 # Turn on/off pest event maps
   mapA          <- 1 # Make maps for adult stage
@@ -157,7 +157,7 @@ if (!is.na(opts[1])) {
 # (2). DIRECTORY INIT ------
 
 #### * Param inputs - species params; thresholds, weather, etc. ####
-params_dir <- "/usr/local/dds/DDRP_B1/spp_params/"
+params_dir <- "C:/Users/tuk34375/Documents/GitHub/ddrp_v3/spp_params/"
 
 #### * Weather inputs and outputs - climate data w/subdirs 4-digit year ####
 if (forecast_data == "PRISM") {
